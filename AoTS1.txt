@@ -1,0 +1,206 @@
+Attack on Titan - Season 1 Script Data
+
+[SCENE: Training Ground]
+Eren: I'm going to destroy every last Titan! I'll kill them all!
+Mikasa: Eren, you need to stay calm.
+Armin: We need to work together if we're going to survive.
+
+[SCENE: Wall Maria]
+Eren: We have to take back Wall Maria. It's our home!
+Mikasa: I'll protect you, Eren. Always.
+Armin: But we need a plan. We can't just rush in blindly.
+
+[SCENE: Battle]
+Eren: Die, you monsters! I won't let you hurt anyone else!
+Levi: Stay focused, brat. Don't let your emotions control you.
+Eren: Yes, Captain!
+
+[SCENE: Training]
+Reiner: You have to be stronger than this, Eren.
+Eren: I know! I'm trying my best!
+Bertholdt: We all have our limits.
+
+[SCENE: Strategy Meeting]
+Armin: If we use the forest to our advantage, we can set a trap.
+Eren: That's brilliant, Armin!
+Mikasa: We should position our best fighters at key points.
+
+[SCENE: Wall Rose]
+Sasha: Food is running low. We need to secure more supplies.
+Connie: I can help with that. My village had good farmland.
+Jean: We need to focus on the mission first.
+
+[SCENE: Emotional Moment]
+Eren: Why... why did they have to die?
+Mikasa: Because we weren't strong enough. Not yet.
+Armin: But we can become stronger. We have to.
+
+[SCENE: Training Ground]
+Eren: I won't give up. Never!
+Reiner: That's the spirit. Keep pushing yourself.
+Annie: Technique matters more than raw determination.
+
+[SCENE: Battle]
+Levi: Don't hesitate. If you hesitate, you die.
+Eren: I understand, sir!
+Mikasa: I won't let anything happen to Eren.
+
+[SCENE: Night Watch]
+Armin: The stars are beautiful tonight.
+Eren: We'll see them from beyond the walls someday.
+Mikasa: As long as we're together.
+
+[SCENE: Politics]
+Erwin: We need to convince the council to support our expedition.
+Levi: Those bureaucrats don't understand what's at stake.
+Hange: Maybe we can show them our research on Titan behavior.
+
+[SCENE: Training]
+Eren: My ODM gear isn't responding properly!
+Mikasa: Check your gas canisters. You might be running low.
+Armin: And make sure your blades are sharp.
+
+[SCENE: Titan Encounter]
+Eren: There! A 15-meter class!
+Levi: I'll handle this one. Watch and learn.
+Eren: That speed... incredible!
+
+[SCENE: Strategy]
+Armin: We need to understand their weaknesses better.
+Hange: That's why we capture them for study!
+Eren: I'd rather just kill them all.
+
+[SCENE: Emotional]
+Mikasa: Promise me you'll come back alive.
+Eren: I promise. We'll see the ocean together.
+Armin: All three of us, just like we dreamed.
+
+[SCENE: Training Ground]
+Jean: You think you're so special, Eren?
+Eren: This isn't about me. It's about humanity!
+Reiner: Both of you, focus on training!
+
+[SCENE: Wall]
+Sasha: I miss my hometown cooking.
+Connie: Me too. But we have a duty here.
+Krista: We should all share a meal when this is over.
+
+[SCENE: Battle Strategy]
+Erwin: The operation will commence at dawn.
+Levi: My squad will take the vanguard.
+Hange: We've prepared all the equipment we need.
+
+[SCENE: Reflection]
+Eren: Sometimes I wonder if we can really win.
+Mikasa: We will. We have to.
+Armin: Knowledge is power. The more we learn, the better our chances.
+
+[SCENE: Training]
+Annie: Your form is sloppy. Focus on precision.
+Eren: I'm trying to be faster!
+Annie: Speed without control is useless.
+
+[SCENE: Wall Rose]
+Eren: We can't let them breach this wall too.
+Jean: We'll hold them off, no matter what.
+Marco: We're all counting on each other.
+
+[SCENE: Night]
+Armin: Did you hear that sound?
+Mikasa: Stay alert. It could be anything.
+Eren: I'm ready for whatever comes.
+
+[SCENE: Planning]
+Erwin: Success depends on everyone doing their part.
+Levi: No one gets left behind.
+Hange: Unless they're already dead!
+
+[SCENE: Emotional Moment]
+Eren: I failed them. I wasn't strong enough.
+Mikasa: You did everything you could.
+Armin: We learn from our mistakes and grow stronger.
+
+[SCENE: Training]
+Reiner: You're improving, Eren. Keep it up.
+Eren: Thanks. I won't let you down.
+Bertholdt: We should practice more formations.
+
+[SCENE: Battle]
+Eren: I won't run away! I'll fight!
+Levi: Good. Fear is natural, but don't let it control you.
+Mikasa: We fight together.
+
+[SCENE: Strategy]
+Armin: If we can predict their movements, we gain an advantage.
+Hange: That's why observation is so important!
+Erwin: Intelligence wins wars as much as strength.
+
+[SCENE: Wall]
+Sasha: I volunteer for the scouting mission.
+Connie: I'm coming with you.
+Jean: Someone needs to keep you two out of trouble.
+
+[SCENE: Emotional]
+Eren: Do you think we'll ever be free?
+Armin: I believe so. We just have to keep fighting.
+Mikasa: As long as we're alive, there's hope.
+
+[SCENE: Training Ground]
+Eren: Again! I need to practice this maneuver again!
+Mikasa: Don't overdo it. Rest is important too.
+Armin: Let me show you a different approach.
+
+[SCENE: Mission Briefing]
+Erwin: This expedition could change everything.
+Levi: We've lost too many already. Let's make it count.
+Hange: The potential discoveries are worth the risk!
+
+[SCENE: Battle]
+Eren: They just keep coming!
+Mikasa: Stay focused on the weak point!
+Levi: Conserve your gas and blades!
+
+[SCENE: Aftermath]
+Armin: We survived... but at what cost?
+Eren: We honor them by continuing to fight.
+Mikasa: Their sacrifice won't be forgotten.
+
+[SCENE: Night Watch]
+Jean: It's quiet tonight. Too quiet.
+Marco: Maybe we're finally getting a break.
+Eren: Or maybe it's the calm before the storm.
+
+[SCENE: Training]
+Annie: You rely too much on brute force.
+Eren: Sometimes that's what's needed!
+Reiner: Both approaches have merit.
+
+[SCENE: Strategy Meeting]
+Erwin: We need to think three steps ahead.
+Armin: I've been analyzing their behavior patterns.
+Hange: And I've been studying their biology!
+
+[SCENE: Emotional]
+Eren: I won't let fear control me anymore.
+Mikasa: That's good. Fear makes mistakes.
+Armin: But healthy caution keeps us alive.
+
+[SCENE: Wall]
+Sasha: Something feels different today.
+Connie: Yeah, I feel it too.
+Krista: We should report this to the commander.
+
+[SCENE: Training Ground]
+Eren: I'm finally getting the hang of this!
+Mikasa: You're improving steadily.
+Armin: Consistency is key in combat.
+
+[SCENE: Battle Planning]
+Levi: We strike fast and hard.
+Eren: I'm ready, sir!
+Mikasa: Formation positions confirmed.
+
+[SCENE: Reflection]
+Armin: The world is bigger than we thought.
+Eren: And we're going to see all of it.
+Mikasa: Together, always.
