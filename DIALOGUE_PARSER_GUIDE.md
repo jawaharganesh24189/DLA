@@ -37,6 +37,7 @@ The `dialogue_parser.py` utility provides a flexible parser for various dialogue
 - **JSONL**: One JSON object per line with context, response, and metadata
 - **CSV**: Simple comma-separated format with context and response columns
 - **Conversational**: Human/Assistant format suitable for conversational AI training
+- **Text**: Plain text format with customizable separator (default: " [SEP] ") for direct model training
 
 ## Usage
 
@@ -53,6 +54,7 @@ python dialogue_parser.py messy_dataset/
 python dialogue_parser.py messy_dataset/ jsonl
 python dialogue_parser.py sample_dialogues.txt csv
 python dialogue_parser.py messy_dataset/ conversational
+python dialogue_parser.py anime_dataset/ text
 ```
 
 ### As a Module
@@ -77,10 +79,18 @@ print(stats)
 jsonl_output = parser.to_training_format(all_turns, "jsonl")
 csv_output = parser.to_training_format(all_turns, "csv")
 conversational_output = parser.to_training_format(all_turns, "conversational")
+text_output = parser.to_training_format(all_turns, "text")  # Plain text with [SEP] separator
+
+# Custom separator for text format
+text_output_custom = parser.to_training_format(all_turns, "text", separator=" | ")
 
 # Save to file
 with open("training_data.jsonl", "w") as f:
     f.write(jsonl_output)
+
+# Save text format for model training
+with open("training_data.txt", "w") as f:
+    f.write(text_output)
 ```
 
 ## Classes
@@ -97,7 +107,9 @@ A dataclass representing a single dialogue turn:
 Main parser class with methods:
 - `parse_file(filepath)`: Parse a single file
 - `parse_directory(directory, pattern)`: Parse all files matching pattern in directory
-- `to_training_format(turns, format_type)`: Convert turns to specified output format
+- `to_training_format(turns, format_type, separator)`: Convert turns to specified output format
+  - `format_type`: "jsonl", "csv", "conversational", or "text"
+  - `separator`: Custom separator for text format (default: " [SEP] ")
 
 ### DatasetStatistics
 
@@ -117,9 +129,10 @@ This parser complements the `FlexibleDialogueDataProcessor` in the main notebook
 
 You can use `dialogue_parser.py` to:
 1. Preprocess messy datasets into clean formats
-2. Convert between formats (JSONL, CSV, conversational)
+2. Convert between formats (JSONL, CSV, conversational, text)
 3. Calculate dataset statistics before training
 4. Combine multiple dialogue files into a single training file
+5. Generate plain text format for direct model training (no JSON parsing needed)
 
 Then use the cleaned output with the notebook's training pipeline.
 
@@ -199,3 +212,47 @@ context,response
 ```
 Human: ...
 Assistant: ...
+### Text Format
+```
+context text [SEP] response text
+another context [SEP] another response
+```
+
+## Text Format for Model Training
+
+The `text` format is specifically designed for direct model training without needing to parse JSON or CSV. Each line contains a context-response pair separated by a customizable separator.
+
+### Default Format (with [SEP] separator)
+```
+There are many injured soldiers inside. [SEP] Wait out here for me.
+Master Shinjurou, are you really going to use him? [SEP] Botanmaru is quite useful.
+```
+
+### Custom Separator Examples
+
+**Tab-separated:**
+```python
+text_output = parser.to_training_format(turns, "text", separator="\t")
+```
+
+**Pipe-separated:**
+```python
+text_output = parser.to_training_format(turns, "text", separator=" | ")
+```
+
+### Usage in Model Training
+
+The text format can be directly consumed by models:
+```python
+# Load text format
+with open("training_data.txt", "r") as f:
+    for line in f:
+        context, response = line.strip().split(" [SEP] ")
+        # Train model with context and response
+```
+
+This format is ideal for:
+- Seq2seq models
+- Transformer-based dialogue models
+- Any model that expects plain text input without structured data parsing
+- Faster data loading (no JSON parsing overhead)

@@ -161,13 +161,14 @@ class DialogueParser:
         
         return all_turns
     
-    def to_training_format(self, turns: List[DialogueTurn], format_type: str = "jsonl") -> str:
+    def to_training_format(self, turns: List[DialogueTurn], format_type: str = "jsonl", separator: str = " [SEP] ") -> str:
         """
         Convert dialogue turns to training format
         
         Args:
             turns: List of DialogueTurn objects
-            format_type: Output format ("jsonl", "csv", "conversational")
+            format_type: Output format ("jsonl", "csv", "conversational", "text")
+            separator: Separator for text format (default: " [SEP] ")
             
         Returns:
             Formatted string ready for training
@@ -203,6 +204,14 @@ class DialogueParser:
                 lines.append(f"Human: {turn.context}")
                 lines.append(f"Assistant: {turn.response}")
                 lines.append("")  # Empty line between turns
+            return "\n".join(lines)
+        
+        elif format_type == "text":
+            # Plain text format for direct model training
+            # Format: context [SEP] response (one per line)
+            lines = []
+            for turn in turns:
+                lines.append(f"{turn.context}{separator}{turn.response}")
             return "\n".join(lines)
         
         else:
@@ -283,7 +292,8 @@ if __name__ == "__main__":
             print(f"\nSaved output to {output_file}")
     else:
         print("Usage: python dialogue_parser.py <file_or_directory> [output_format]")
-        print("  output_format: jsonl, csv, or conversational (optional)")
+        print("  output_format: jsonl, csv, conversational, or text (optional)")
         print("\nExample:")
         print("  python dialogue_parser.py messy_dataset/")
-        print("  python dialogue_parser.py sample_dialogues.txt jsonl")
+        print("  python dialogue_parser.py sample_dialogues.txt text")
+        print("  python dialogue_parser.py anime_dataset/ jsonl")
