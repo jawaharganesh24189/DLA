@@ -286,7 +286,11 @@ if __name__ == "__main__":
         if len(sys.argv) > 2:
             output_format = sys.argv[2]
             output = parser.to_training_format(turns, output_format)
-            output_file = f"output.{output_format}"
+            # Use .txt extension for text format, otherwise use format name
+            if output_format == "text":
+                output_file = "output.txt"
+            else:
+                output_file = f"output.{output_format}"
             with open(output_file, 'w', encoding='utf-8') as f:
                 f.write(output)
             print(f"\nSaved output to {output_file}")
