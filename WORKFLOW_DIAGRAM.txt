@@ -1,0 +1,60 @@
+================================================================================
+                    DialogueParser Text Format Workflow
+================================================================================
+
+INPUT: Multiple .txt files
+┌─────────────────────────────────────────────────────────────────────────┐
+│ anime_dataset/                                                          │
+│   ├── train-anime-107.txt      (context: ... response: ... format)     │
+│   ├── train-anime-108.txt      (context: ... response: ... format)     │
+│   ├── validation-anime-8.txt   (context: ... response: ... format)     │
+│   └── validation-anime-9.txt   (context: ... response: ... format)     │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+PROCESS: DialogueParser
+┌─────────────────────────────────────────────────────────────────────────┐
+│ $ python dialogue_parser.py anime_dataset/ text                        │
+│                                                                         │
+│ 1. Read all .txt files                                                 │
+│ 2. Parse context-response format                                       │
+│ 3. Combine all dialogues                                               │
+│ 4. Format as plain text with [SEP] separator                           │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+OUTPUT: Single .txt file
+┌─────────────────────────────────────────────────────────────────────────┐
+│ output.txt                                                              │
+│                                                                         │
+│ context_1 [SEP] response_1                                              │
+│ context_2 [SEP] response_2                                              │
+│ context_3 [SEP] response_3                                              │
+│ ...                                                                     │
+│ context_n [SEP] response_n                                              │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+MODEL TRAINING: Direct consumption
+┌─────────────────────────────────────────────────────────────────────────┐
+│ with open('output.txt', 'r') as f:                                      │
+│     for line in f:                                                      │
+│         context, response = line.strip().split(' [SEP] ')               │
+│         train_model(context, response)                                  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                            Format Comparison
+================================================================================
+
+OLD WAY (JSON)                          NEW WAY (Text)
+────────────────────────────────────    ────────────────────────────────────
+{"context": "Hello",                    Hello [SEP] Hi there!
+ "response": "Hi there!",               
+ "metadata": {...}}                     
+
+Requires: json.loads()                  Requires: str.split()
+Slower:   JSON parsing overhead         Faster:   Direct text processing
+Complex:  Nested dict access            Simple:   String operations
+
+================================================================================
