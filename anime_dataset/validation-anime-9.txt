@@ -1,0 +1,6 @@
+context: Sister Mei, the ceremony is about to begin. response: I'm ready.
+context: Sister Mei, the ceremony is about to begin.\I'm ready. response: May the spirits guide us.
+context: Prince Takeshi has arrived at the palace. response: Prepare the throne room for his arrival.
+context: Prince Takeshi has arrived at the palace.\Prepare the throne room for his arrival. response: Should we notify the Queen?
+context: The sacred temple holds many secrets. response: We must tread carefully.
+context: The sacred temple holds many secrets.\We must tread carefully. response: I sense a powerful presence here.

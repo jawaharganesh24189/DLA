@@ -1,0 +1,10 @@
+context: There are many injured soldiers inside. It's not correct for a woman to enter. response: Wait out here for me.
+context: There are many injured soldiers inside. It's not correct for a woman to enter.\Wait out here for me. response: Second Prince.
+context: Master Shinjurou, are you really going to use him? response: Botanmaru is quite useful.
+context: Master Shinjurou, are you really going to use him?\Botanmaru is quite useful. response: I understand your concerns.
+context: The enemy forces are approaching from the east. response: We must defend the castle at all costs.
+context: The enemy forces are approaching from the east.\We must defend the castle at all costs. response: Send word to the northern battalion.
+context: Princess, you shouldn't be here. It's too dangerous. response: I refuse to hide while my people suffer.
+context: Princess, you shouldn't be here. It's too dangerous.\I refuse to hide while my people suffer. response: Your Highness, please reconsider.
+context: Brother, I found the ancient scroll. response: Excellent work, little sister.
+context: Brother, I found the ancient scroll.\Excellent work, little sister. response: What does it say about the prophecy?

@@ -1,0 +1,10 @@
+context: The training session was brutal today. response: You need to push harder if you want to improve.
+context: The training session was brutal today.\You need to push harder if you want to improve. response: Master, I'm trying my best.
+context: Lady Akane has been waiting for you. response: Tell her I'll be there shortly.
+context: Lady Akane has been waiting for you.\Tell her I'll be there shortly. response: She seemed quite upset.
+context: The village elder spoke of a great darkness coming. response: We must prepare for what lies ahead.
+context: The village elder spoke of a great darkness coming.\We must prepare for what lies ahead. response: How much time do we have?
+context: Captain, the scouts have returned. response: What news do they bring?
+context: Captain, the scouts have returned.\What news do they bring? response: The enemy numbers are greater than expected.
+context: This sword belonged to my father. response: He was a great warrior.
+context: This sword belonged to my father.\He was a great warrior. response: I will honor his memory.

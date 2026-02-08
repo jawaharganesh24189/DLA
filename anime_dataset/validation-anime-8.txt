@@ -1,0 +1,6 @@
+context: Lord Commander, the situation is dire. response: We've faced worse before.
+context: Lord Commander, the situation is dire.\We've faced worse before. response: But not with so few soldiers.
+context: The magic barrier is weakening. response: We need to reinforce it immediately.
+context: The magic barrier is weakening.\We need to reinforce it immediately. response: I'll gather the mages.
+context: Young master, your technique has improved. response: Thank you for your guidance, sensei.
+context: Young master, your technique has improved.\Thank you for your guidance, sensei. response: Continue practicing daily.
