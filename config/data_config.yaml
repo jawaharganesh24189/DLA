@@ -1,0 +1,68 @@
+# Enhanced Data Processing Configuration for GAN Dialogue Model
+
+# Google Drive configuration
+drive:
+  base_path: "/content/drive/MyDrive/DLA_Notebooks_Data_PGPM"
+  data_folder: "Dataset"
+  cache_folder: "cache"
+  mount_timeout: 300  # seconds
+  retry_attempts: 3
+
+# Processing configuration
+processing:
+  batch_size: 100
+  parallel_workers: 4
+  max_files: null  # null = all files, or specify a number
+  memory_limit_mb: 2048
+  show_progress: true
+
+# Supported file formats
+formats:
+  supported: ["txt", "json", "jsonl", "csv"]
+  encodings: ["utf-8", "latin-1", "cp1252"]
+  csv_config:
+    context_column: "context"
+    response_column: "response"
+    has_header: true
+
+# Quality filters
+quality:
+  min_dialogue_length: 5
+  max_dialogue_length: 150
+  min_char_occurrence: 3
+  remove_duplicates: true
+  min_word_count: 2
+  max_word_count: 100
+
+# Tokenizer configuration
+tokenizer:
+  max_vocab_size: 5000
+  min_word_freq: 2
+  oov_token: "<UNK>"
+  pad_token: "<PAD>"
+  start_token: "<START>"
+  end_token: "<END>"
+
+# Data augmentation
+augmentation:
+  enabled: true
+  techniques: ["synonym_replace", "context_shuffle"]
+  augment_ratio: 0.3
+  synonym_replace_prob: 0.3
+  max_synonym_replacements: 3
+
+# Caching configuration
+cache:
+  enabled: true
+  cache_dir: "./cache"
+  checkpoint_interval: 500  # files
+  validate_cache: true
+  cache_expiry_hours: 168  # 1 week
+
+# Monitoring configuration
+monitoring:
+  log_level: "INFO"
+  log_file: "processing.log"
+  save_stats: true
+  stats_file: "processing_stats.json"
+  error_log: "failed_files.csv"
