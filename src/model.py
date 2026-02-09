@@ -140,13 +140,14 @@ class Generator(keras.Model):
             # Top-k sampling
             if top_k > 0:
                 top_k_logits, top_k_indices = tf.nn.top_k(logits, k=top_k)
-                next_token = tf.random.categorical(top_k_logits, num_samples=1)
-                next_token = tf.gather_nd(top_k_indices, next_token, batch_dims=1)
+                next_token_idx = tf.random.categorical(top_k_logits, num_samples=1)
+                # Get the actual token from top_k_indices
+                next_token = tf.gather(top_k_indices[0], next_token_idx[0])
             else:
                 next_token = tf.random.categorical(logits, num_samples=1)
             
             # Add to generated sequence
-            next_token = int(next_token[0, 0])
+            next_token = int(next_token[0])
             generated.append(next_token)
             
             # Check for end token (assuming 0 is padding/end)

@@ -236,18 +236,28 @@ class DatasetStatistics:
 if __name__ == "__main__":
     parser = DialogueParser()
     
-    # Parse a single file
-    turns = parser.parse_file("tasks/51f6a128-c7eb-41d1-b844-a72609c11718/validation-anime-8.txt")
-    
-    # Parse entire directory
-    all_turns = parser.parse_directory("tasks/51f6a128-c7eb-41d1-b844-a72609c11718")
-    
-    # Calculate statistics
-    stats = DatasetStatistics.calculate_stats(all_turns)
-    print("Dataset Statistics:")
-    for key, value in stats.items():
-        print(f"  {key}: {value}")
-    
-    # Convert to training format
-    jsonl_output = parser.to_training_format(all_turns, "jsonl")
-    print(f"\nGenerated {len(jsonl_output.splitlines())} JSONL entries")
+    # Check if data directory exists
+    import os
+    if not os.path.exists("data"):
+        print("No data directory found. Creating sample data...")
+        os.makedirs("data", exist_ok=True)
+        print("Please add .txt files to the data/ directory")
+    else:
+        # Parse entire directory
+        all_turns = parser.parse_directory("data")
+        
+        if all_turns:
+            # Calculate statistics
+            stats = DatasetStatistics.calculate_stats(all_turns)
+            print("Dataset Statistics:")
+            for key, value in stats.items():
+                print(f"  {key}: {value}")
+            
+            # Convert to training format
+            jsonl_output = parser.to_training_format(all_turns[:5], "jsonl")
+            print(f"\nSample JSONL entries (first 5):")
+            print(jsonl_output)
+            print(f"\n✓ Successfully parsed {len(all_turns)} dialogue turns from data/")
+        else:
+            print("No dialogue data found in data/ directory")
+            print("Please add .txt files with dialogue data")
