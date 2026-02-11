@@ -5,12 +5,22 @@ This repository contains notebooks and code for building advanced language model
 
 ## Notebooks
 
-### 1. Football_Tactics_Model.ipynb ⭐ NEW
-**AI-powered football tactics prediction using pure DLA Transformer techniques**
+### 1. Football_Tactics_Model.ipynb ⭐ ENHANCED
+**AI-powered football tactics prediction with visualizations and real team data**
 
-Demonstrates building a football tactics model using advanced architectures from DLA notebooks 8B and 9 (NO data_processor.py used).
+Complete football tactics AI system with DLA Transformer techniques, comprehensive metrics, and real team integration.
 
-**Key Features:**
+**🆕 Latest Enhancements:**
+- ✅ **Real Team Data**: 6 top teams (Man City, Real Madrid, Liverpool, Barcelona, Bayern, Arsenal)
+- ✅ **66 Real Players**: Actual 2023-2024 squad members with formations
+- ✅ **Training Visualizations**: Loss/accuracy curves, saved as `training_metrics.png`
+- ✅ **Confusion Matrix**: Token prediction heatmap, saved as `confusion_matrix.png`
+- ✅ **Tactical Analysis**: Distribution plots across sampling methods
+- ✅ **Formation Heatmap**: Aggressiveness by formation and ball position
+- ✅ **Confidence Scores**: Per-token prediction confidence visualization
+- ✅ **Method Comparison**: Side-by-side sampling strategy analysis
+
+**Core Features:**
 - **Encoder-Decoder Transformer**: Game state → Tactical sequences
 - **From Notebook 8B**: TransformerEncoder, TransformerDecoder, PositionalEmbedding, Causal masking
 - **From Notebook 9**: Temperature sampling, Top-K sampling, Greedy decoding
@@ -20,13 +30,22 @@ Demonstrates building a football tactics model using advanced architectures from
 
 **Architecture:**
 ```
-Game State (Formation + Ball + Status) 
-    → Encoder (Self-attention)
+Real Team Data → Game State Encoding
+    → Encoder (Self-attention, 128-dim, 4 heads)
     → Decoder (Causal + Cross-attention)
-    → Tactical Sequence (Player actions)
+    → Tactical Sequence
+    → Metrics & Visualizations (6 charts)
 ```
 
-**See:** [FOOTBALL_TACTICS_GUIDE.md](FOOTBALL_TACTICS_GUIDE.md) for comprehensive guide.
+**Generated Visualizations:**
+1. `training_metrics.png` - Training/validation curves
+2. `confusion_matrix.png` - Prediction accuracy heatmap
+3. `tactical_distribution.png` - Action frequency analysis
+4. `formation_heatmap.png` - Tactical intensity map
+5. `prediction_confidence.png` - Token confidence scores
+6. `sampling_comparison.png` - Method comparison
+
+**See:** [FOOTBALL_TACTICS_GUIDE.md](FOOTBALL_TACTICS_GUIDE.md) for comprehensive guide with visualization examples.
 
 ### 2. DLA_Dialogue_Model_Rebuild.ipynb
 A comprehensive notebook that demonstrates building a dialogue language model using the DLA sample code.
