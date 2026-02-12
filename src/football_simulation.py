@@ -119,7 +119,8 @@ class SetPieceManager:
             
         # Logic for boundaries
         if ball_x > 105:  # Out behind opponent goal
-            # Decide Corner vs Goal Kick (Simplified: 50/50 or based on last touch)
+            # NOTE: Simplified as 50/50 random choice as per specification
+            # In production, should be based on which team last touched the ball
             return "CORNER" if np.random.random() > 0.5 else "GOAL_KICK"
             
         elif ball_x < 0:  # Out behind own goal

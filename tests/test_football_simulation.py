@@ -102,8 +102,9 @@ class TestPhysicsEngine(unittest.TestCase):
         )
         
         self.assertTrue(intercepted)
-        # Either defender could intercept, just verify one did
-        self.assertIn(defender.name, ["Far_Defender", "Close_Defender"])
+        # Only Close_Defender is within interception radius (0.5m from line)
+        # Far_Defender is 10m away and cannot intercept
+        self.assertEqual(defender.name, "Close_Defender")
 
 
 class TestSetPieceManager(unittest.TestCase):
@@ -120,6 +121,9 @@ class TestSetPieceManager(unittest.TestCase):
     
     def test_ball_out_beyond_goal(self):
         """Test ball beyond goal line"""
+        # Note: Implementation uses 50/50 random choice as per problem statement
+        # In production, this should be based on last touch
+        np.random.seed(42)  # Seed for reproducible test
         state = self.manager.check_boundaries(110.0, 34.0)
         self.assertIn(state, ["CORNER", "GOAL_KICK"])
     
